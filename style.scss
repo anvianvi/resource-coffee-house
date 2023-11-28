@@ -34,7 +34,8 @@ p {
 .btn {
   cursor: pointer;
   border-radius: 100px;
-  background: var(--background-body, #e1d4c9);
+  background: $color-background-body;
+  color: $color-text-dark;
   width: 200px;
   border: 0;
   outline: 0;
@@ -65,22 +66,23 @@ p {
     transform: translateX(0);
   }
 }
-// &::after {
-//   content: url("/coffe-cup.svg");
-//   // background: url(/coffee-cup.svg) center/cover no-repeat;
-//   color: blue;
-//   position: absolute;
-//   height: 20px;
-//   width: 20px;
-//   border: 1px solid red;
-//   /* background: red; */
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   opacity: 0;
-//   transition: opacity 0.3s ease-in-out;
-// }
 
-// &:hover::after {
-//   opacity: 1;
-// }
+.underline-hover-effect {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: $color-text-dark;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
