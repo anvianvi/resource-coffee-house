@@ -81,4 +81,3 @@ document.getElementById('enjoy-prev-button').addEventListener('click', prevSlide
 dots.forEach((element, index) => {
   element.addEventListener('click', () => currentSlide(index));
 });
-

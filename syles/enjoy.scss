@@ -6,7 +6,7 @@
   .h2 {
     text-align: center;
   }
-  
+
   .dots-container {
     margin-inline: auto;
     width: fit-content;
@@ -20,6 +20,7 @@
     border-radius: 100px;
     background: $color-border-light;
     position: relative;
+    cursor: pointer;
   }
   .active {
     background: $color-border-dark;
@@ -43,6 +44,7 @@
   overflow: hidden;
 
   .pagination-button {
+    cursor: pointer;
     position: absolute;
     top: 50%;
     width: 60px;
