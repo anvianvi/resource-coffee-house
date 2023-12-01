@@ -57,4 +57,12 @@
     font-size: 16px;
     font-weight: 600;
   }
+  .go-menu-link.active {
+    pointer-events: none;
+    cursor: default;
+
+    &::after {
+      width: 100%;
+    }
+  }
 }

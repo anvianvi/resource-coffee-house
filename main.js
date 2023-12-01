@@ -1,4 +1,4 @@
-import './styles.scss'
+import './style.scss'
 import './styles/header.scss'
 import './styles/hero.scss'
 import { generateEnjoyList } from './scripts/enjoy';
