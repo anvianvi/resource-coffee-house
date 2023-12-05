@@ -1,0 +1,44 @@
+@import "variables";
+
+.about-block {
+  padding-bottom: 100px;
+
+  .h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.photo-colection {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  &-col {
+    max-width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .img-container {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+    }
+
+    .big {
+      height: 590px;
+    }
+    .small {
+      height: 430px;
+    }
+  }
+}
+
+.img-container img {
+  transition: transform 2s ease;
+}
+.img-container:hover img {
+  transform: scale(0.9);
+}
