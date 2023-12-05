@@ -1,6 +1,6 @@
 export const coffeListMain = [
   {
-    img: "/coffe/coffee-slider-1.png",
+    img: "/resource-coffee-house/coffe/coffee-slider-1.png",
     name: "S’mores Frappuccino",
     description: "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.",
     price: "5.50"
