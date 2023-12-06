@@ -1,0 +1,59 @@
+@import "./variables";
+
+.menu-h2 {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+.ofer-tabs {
+  margin: 0 auto 40px;
+  width: fit-content;
+  display: flex;
+  gap: 16px;
+
+  .menu-selector {
+    box-sizing: border-box;
+    padding: 8px 16px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 100px;
+    background: transparent;
+    border: 1px solid $color-border-light;
+    color: $color-text-dark;
+
+    .selector-icon {
+      display: flex;
+      padding: 3px 7px;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      background: $color-border-light;
+    }
+
+    &:hover {
+      background: $color-background-container;
+      border: 1px solid $color-background-container;
+      color: $color-text-light;
+      .selector-icon {
+        background: $color-background-body;
+      }
+    }
+  }
+
+  .menu-selector.active {
+    background: $color-background-container;
+    border: 1px solid $color-background-container;
+    color: $color-text-light;
+    .selector-icon {
+      background: $color-background-body;
+    }
+  }
+}
+
+

@@ -1,3 +1,5 @@
 import '/styles/global.scss'
 import '/styles/header.scss'
+import '/styles/menu-main.scss'
+import '/styles/ofer-list.scss'
 import '/styles/footer.scss'
