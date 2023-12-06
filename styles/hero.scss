@@ -1,0 +1,30 @@
+@import "./variables";
+
+.herro {
+  background: $color-background-container;
+  width: 100%;
+  padding: 100px;
+  background: url("/resource-coffee-house/img/img-hero.jpg") center/cover
+    no-repeat;
+  border-radius: 40px;
+}
+
+.herro-wrapper {
+  max-width: 530px;
+  color: $color-text-light;
+
+  .h1-home {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 105%;
+
+    span {
+      color: $color-text-accent;
+      font-style: italic;
+    }
+  }
+
+  p {
+    margin: 40px 0;
+  }
+}
