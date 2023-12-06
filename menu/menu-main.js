@@ -12,10 +12,18 @@ function createProductCard(product, index) {
     console.log(product.name)
   };
 
+  const imgContainer = document.createElement('div');
+  imgContainer.className = 'img-container';
+
   const img = document.createElement('img');
   img.className = 'photo';
   img.src = `/resource-coffee-house/img/products/${product.category.toLowerCase()}-${index + 1}.jpg`;
   img.alt = `photo of ${product.name}`;
+
+  imgContainer.appendChild(img);
+
+  const textContainer = document.createElement('div');
+  textContainer.className = 'text-container';
 
   const h3 = document.createElement('h3');
   h3.className = 'h3';
@@ -29,10 +37,12 @@ function createProductCard(product, index) {
   price.className = 'price';
   price.textContent = `$ ${product.price}`;
 
-  div.appendChild(img);
-  div.appendChild(h3);
-  div.appendChild(description);
-  div.appendChild(price);
+  textContainer.appendChild(h3);
+  textContainer.appendChild(description);
+  textContainer.appendChild(price);
+
+  div.appendChild(imgContainer);
+  div.appendChild(textContainer);
 
   return div;
 }
@@ -46,11 +56,7 @@ function renderProductList(products) {
   });
 }
 
-// Call the function to render the product list
-// renderProductList(products);
-
-
-export function showOffers(category) {
+function showOffers(category) {
   document.getElementById('ofer-list').replaceChildren();
 
   const offers = products.filter(product => product.category === category);
