@@ -6,14 +6,14 @@
   margin: 0 auto 40px;
 }
 .ofer-tabs {
-  margin: 0 auto 40px;
+  margin-bottom: 40px;
   width: fit-content;
   display: flex;
-  gap: 16px;
+  gap: 8px;
 
   .menu-selector {
     box-sizing: border-box;
-    padding: 8px 16px 8px;
+    padding: 8px 16px 8px 8px;
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
@@ -56,4 +56,30 @@
   }
 }
 
+@media (width > 766px) {
+  .ofer-tabs {
+    margin: 0 auto 40px;
+    // width: fit-content;
+    // display: flex;
+    gap: 16px;
 
+    .menu-selector {
+      // box-sizing: border-box;
+      // padding: 8px 16px 8px 0px;
+    }
+  }
+}
+
+@media (width > 1436px) {
+  // .ofer-tabs {
+  //   margin: 0 auto 40px;
+  //   width: fit-content;
+  //   display: flex;
+  //   gap: 16px;
+
+  //   .menu-selector {
+  //     box-sizing: border-box;
+  //     padding: 8px 16px 8px 0px;
+  //   }
+  // }
+}
