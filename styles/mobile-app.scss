@@ -13,6 +13,7 @@
 
   .content-block {
     max-width: 348px;
+    margin-bottom: 37px;
 
     .h2 {
       text-align: left;
@@ -68,9 +69,9 @@
 
 @media (width>766px) {
   .mobile-app {
-    justify-content: space-between;
     .content-block {
       max-width: 688px;
+      margin-bottom: 99px;
 
       .buttons-container {
         display: flex;
@@ -87,6 +88,10 @@
 
 @media (width>1438px) {
   .mobile-app {
+    margin: 0;
+
+    justify-content: space-between;
+
     .content-block {
       max-width: 630px;
     }

@@ -44,16 +44,21 @@
   transform: scale(0.9);
 }
 
-@media (width>766px) {
+@media (width > 766px) {
+  .photo-colection {
+    &-col {
+      max-width: 688px;
+    }
+  }
 }
 
-@media (width>1438px) {
+@media (width > 1436px) {
   .photo-colection {
     &-col {
       max-width: 660px;
-      .small {
-        display: block;
-      }
+    }
+    .small {
+      display: block;
     }
   }
 }
