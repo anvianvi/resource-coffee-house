@@ -36,7 +36,7 @@ function createProductCard(product, index) {
 
   const price = document.createElement('p');
   price.className = 'price';
-  price.textContent = `$ ${product.price}`;
+  price.textContent = `$${product.price}`;
 
   textContainer.appendChild(h3);
   textContainer.appendChild(description);

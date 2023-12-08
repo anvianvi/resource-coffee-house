@@ -32,7 +32,7 @@ ul {
 }
 
 .layout-container {
-  max-width: 1360px;
+  max-width: 348px;
   width: 98vw;
 }
 
@@ -53,6 +53,7 @@ ul {
 .btn-primary {
   position: relative;
   height: 64px;
+  text-decoration: none;
 
   span {
     transform: translateX(14px);
@@ -93,12 +94,26 @@ ul {
 }
 
 .h2 {
-  font-size: 60px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 125%;
 
   span {
     font-style: italic;
     color: $color-text-accent;
+  }
+}
+@media (width>766px) {
+  .layout-container {
+    max-width: 688px;
+  }
+  .h2 {
+    font-size: 60px;
+  }
+}
+
+@media (width>1438px) {
+  .layout-container {
+    max-width: 1360px;
   }
 }

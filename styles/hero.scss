@@ -3,7 +3,7 @@
 .herro {
   background: $color-background-container;
   width: 100%;
-  padding: 100px;
+  padding: 60px 16px;
   background: url("/resource-coffee-house/img/img-hero.jpg") center/cover
     no-repeat;
   border-radius: 40px;
@@ -14,10 +14,9 @@
   color: $color-text-light;
 
   .h1-home {
-    font-size: 72px;
+    font-size: 42px;
     font-weight: 600;
-    line-height: 105%;
-
+    line-height: 115%;
     span {
       color: $color-text-accent;
       font-style: italic;
@@ -26,5 +25,23 @@
 
   p {
     margin: 40px 0;
+  }
+}
+
+@media (width>766px) {
+  .herro {
+    padding: 100px 60px;
+  }
+  .herro-wrapper {
+    .h1-home {
+      font-size: 72px;
+      line-height: 105%;
+    }
+  }
+}
+
+@media (width>1438px) {
+  .herro {
+    padding: 100px;
   }
 }

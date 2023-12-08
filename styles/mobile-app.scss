@@ -2,17 +2,18 @@
 
 .mobile-app {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 100px;
 
   img {
-    max-width: 630px;
+    max-width: 348px;
   }
 
   .content-block {
-    max-width: 630px;
+    max-width: 348px;
+    margin-bottom: 37px;
 
     .h2 {
       text-align: left;
@@ -24,6 +25,7 @@
 
     .buttons-container {
       display: flex;
+      flex-direction: column;
       gap: 20px;
 
       .mobile-btn {
@@ -61,6 +63,37 @@
           filter: none;
         }
       }
+    }
+  }
+}
+
+@media (width>766px) {
+  .mobile-app {
+    .content-block {
+      max-width: 688px;
+      margin-bottom: 99px;
+
+      .buttons-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    img {
+      max-width: 630px;
+    }
+  }
+}
+
+@media (width>1438px) {
+  .mobile-app {
+    margin: 0;
+
+    justify-content: space-between;
+
+    .content-block {
+      max-width: 630px;
     }
   }
 }

@@ -3,19 +3,19 @@
 .footer {
   border-radius: 40px;
   background: $color-border-dark;
-  padding: 100px;
+  padding: 60px 16px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
-  gap: 100px;
   flex-wrap: wrap;
+  gap: 40px;
 
   .h2 {
     color: $color-border-light;
     margin-bottom: 40px;
   }
   .content-block {
-    max-width: 530px;
+    max-width: 315px;
     display: flex;
     flex-direction: column;
   }
@@ -68,5 +68,25 @@
   }
   .contacts-phone {
     margin-bottom: 20px;
+  }
+}
+
+@media (width>766px) {
+  .footer {
+    padding: 100px 60px;
+    gap: 100px;
+
+    .content-block {
+      max-width: 568px;
+    }
+  }
+}
+
+@media (width>1438px) {
+  .footer {
+    padding: 100px;
+    .content-block {
+      max-width: 530px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { coffeListMain } from '../data/coffe-slider';
 
-export function generateEnjoyList() {
+function generateEnjoyList() {
   const sliderList = document.getElementById('slider-list')
 
   coffeListMain.forEach((item) => {
@@ -25,7 +25,7 @@ export function generateEnjoyList() {
 
     const price = document.createElement('p');
     price.className = 'slide-card-price';
-    price.textContent = `$ ${item.price}`;
+    price.textContent = `$${item.price}`;
 
     slideCard.appendChild(img);
     slideCard.appendChild(h3);
@@ -36,6 +36,8 @@ export function generateEnjoyList() {
   });
 }
 
+generateEnjoyList()
+
 let currentSlideIndex = 0;
 const dots = document.querySelectorAll(".dot")
 dots[currentSlideIndex].classList.add('active')
@@ -44,7 +46,7 @@ const slideList = document.getElementById('slider-list')
 
 let sliderTranslation = 0;
 
-export function currentSlide(index) {
+function currentSlide(index) {
   currentSlideIndex = index
   sliderTranslation = -(index * 100)
   slideList.style.transform = `translateX(${sliderTranslation}%)`;
@@ -54,14 +56,14 @@ export function currentSlide(index) {
   dots[currentSlideIndex].classList.add('active')
 }
 
-export function nextSlide() {
+function nextSlide() {
   currentSlideIndex = (currentSlideIndex + 1) % dots.length;
   sliderTranslation = - (currentSlideIndex * 100);
   slideList.style.transform = `translateX(${sliderTranslation}%)`;
   updateDots();
 }
 
-export function prevSlide() {
+function prevSlide() {
   currentSlideIndex = (currentSlideIndex - 1 + dots.length) % dots.length;
   sliderTranslation = - (currentSlideIndex * 100);
   console.log(currentSlideIndex)

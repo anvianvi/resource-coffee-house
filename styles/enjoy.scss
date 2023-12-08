@@ -44,12 +44,12 @@
   overflow: hidden;
 
   .pagination-button {
+    display: none;
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: 60px;
     height: 60px;
-    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -92,7 +92,7 @@
   max-width: 480px;
   &-img {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   &-h3 {
     text-align: center;
@@ -111,5 +111,20 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
+  }
+}
+@media (width>766px) {
+  .slider-container {
+    .pagination-button {
+      display: flex;
+    }
+  }
+}
+
+@media (width>1438px) {
+  .slide-card {
+    &-img {
+      margin-bottom: 20px;
+    }
   }
 }
