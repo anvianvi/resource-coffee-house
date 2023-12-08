@@ -14,7 +14,7 @@
   flex-wrap: wrap;
 
   &-col {
-    max-width: 660px;
+    max-width: 348px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -32,6 +32,7 @@
     }
     .small {
       height: 430px;
+      display: none;
     }
   }
 }
@@ -41,4 +42,18 @@
 }
 .img-container:hover img {
   transform: scale(0.9);
+}
+
+@media (width>766px) {
+}
+
+@media (width>1438px) {
+  .photo-colection {
+    &-col {
+      max-width: 660px;
+      .small {
+        display: block;
+      }
+    }
+  }
 }
