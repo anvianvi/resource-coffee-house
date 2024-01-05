@@ -1,5 +1,6 @@
 import '/styles/global.scss'
 import '/styles/header.scss'
+import '/scripts/burger-menu';
 import '/styles/menu-main.scss'
 import { products } from '../data/products';
 import '/styles/ofer-list.scss'
