@@ -30,6 +30,10 @@ ul {
   font-style: normal;
   font-weight: 400;
 }
+.body.burger-open {
+  overflow-y: hidden;
+  padding-right: 18px;
+}
 
 .layout-container {
   max-width: 348px;
