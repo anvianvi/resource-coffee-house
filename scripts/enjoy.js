@@ -77,7 +77,6 @@ function prevSlide() {
   dotsFill[currentSlideIndex].style.width = 0
   currentSlideIndex = (currentSlideIndex - 1 + dots.length) % dots.length;
   sliderTranslation = - (currentSlideIndex * 100);
-  console.log(currentSlideIndex)
   slideList.style.transform = `translateX(${sliderTranslation}%)`;
   startInterval();
 }
@@ -97,7 +96,6 @@ function startInterval() {
       const elapsedTime = currentTime - startTime;
       progressBarWidth = (elapsedTime / 5000) * 100; // Use 5000 milliseconds (5 seconds) for the slide interval
       dotsFill[currentSlideIndex].style.width = progressBarWidth + "%";
-      console.log('i work');
       if (progressBarWidth < 100) {
         requestAnimationFrame(updateProgressBar);
       } else {
