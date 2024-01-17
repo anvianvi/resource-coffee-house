@@ -87,6 +87,7 @@
 }
 
 .modal-content-container {
+  box-sizing: border-box;
   padding: 16px;
   border-radius: 40px;
   background: $color-background-body;
@@ -98,14 +99,14 @@
   width: 310px;
   height: 310px;
   border-radius: 40px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
 .product-description-container {
-  max-width: 438px;
+  max-width: 310px;
 
   .proudct-header {
     font-size: 24px;
@@ -122,6 +123,7 @@
     padding-top: 8px;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 6px;
   }
 
@@ -219,5 +221,18 @@
   &:hover {
     background: $color-background-container;
     color: $color-text-light;
+  }
+}
+@media (width > 766px) {
+  .product-description-container {
+    max-width: 326px;
+  }
+  .modal-img-container {
+    display: flex;
+  }
+}
+@media (width > 1300px) {
+  .product-description-container {
+    max-width: 438px;
   }
 }
