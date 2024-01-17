@@ -24,6 +24,7 @@
     background: transparent;
     border: 1px solid $color-border-light;
     color: $color-text-dark;
+    transition: color 0.3s ease, background 0.5s ease;
 
     .selector-icon {
       display: flex;
@@ -34,6 +35,7 @@
       align-items: center;
       border-radius: 100px;
       background: $color-border-light;
+      transition: color 0.3s ease, background 0.5s ease;
     }
 
     &:hover {
@@ -72,4 +74,150 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.product-modal {
+  background: rgba(64, 63, 61, 0.8);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-container {
+  padding: 16px;
+  border-radius: 40px;
+  background: $color-background-body;
+  display: flex;
+  gap: 0 20px;
+}
+
+.modal-img-container {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-description-container {
+  max-width: 438px;
+
+  .proudct-header {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 12px;
+  }
+
+  .product-description {
+    margin-bottom: 20px;
+  }
+
+  .addons-selectors-box {
+    padding-top: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .addons-selector {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    padding: 8px 16px 8px 8px;
+    border-radius: 100px;
+    border: 1px solid $color-border-light;
+    transition: color 0.3s ease, background 0.5s ease;
+
+    &.active {
+      background: $color-background-container;
+
+      .addons-lable {
+        background: $color-background-body;
+      }
+
+      .addons-value {
+        color: $color-text-light;
+      }
+    }
+
+    &:hover {
+      background: $color-background-container;
+
+      .addons-lable {
+        background: $color-background-body;
+      }
+
+      .addons-value {
+        color: $color-text-light;
+      }
+    }
+
+    .addons-lable {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      background: $color-border-light;
+      font-weight: 600;
+      line-height: 150%;
+      text-transform: capitalize;
+      transition: color 0.3s ease, background 0.5s ease;
+    }
+
+    .addons-value {
+      font-weight: 600;
+      line-height: 150%;
+      transition: color 0.3s ease, background 0.5s ease;
+    }
+  }
+}
+
+.total-cost-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.tool-tip-box {
+  display: flex;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+  border-top: 1px solid $color-border-light;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.close-modal-button {
+  cursor: pointer;
+  width: 100%;
+  background: transparent;
+  padding-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid $color-border-dark;
+  transition: color 0.3s ease, background 0.5s ease;
+  font-weight: 600;
+  line-height: 150%;
+
+  &:hover {
+    background: $color-background-container;
+    color: $color-text-light;
+  }
 }

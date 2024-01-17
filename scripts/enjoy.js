@@ -1,12 +1,12 @@
 import { coffeListMain } from '../data/coffe-slider';
 
-let intervalId;
 let progressBarWidth = 0;
 let startTime;
 let pausedTime = 0;
 let isPaused = false;
 let currentSlideIndex = 0;
 let sliderTranslation = 0;
+let intervalId
 
 const dotsFill = document.querySelectorAll(".dot-fill");
 const dots = document.querySelectorAll(".dot")
@@ -94,7 +94,7 @@ function startInterval() {
     if (!isPaused) {
       const currentTime = Date.now();
       const elapsedTime = currentTime - startTime;
-      progressBarWidth = (elapsedTime / 5000) * 100; // Use 5000 milliseconds (5 seconds) for the slide interval
+      progressBarWidth = (elapsedTime / 5000) * 100;
       dotsFill[currentSlideIndex].style.width = progressBarWidth + "%";
       if (progressBarWidth < 100) {
         requestAnimationFrame(updateProgressBar);
@@ -102,7 +102,7 @@ function startInterval() {
         progressBarWidth = 0;
         dotsFill[currentSlideIndex].style.width = 0;
         nextSlide();
-        startTime = Date.now(); // Reset startTime after completing a slide
+        startTime = Date.now();
       }
     } else {
       requestAnimationFrame(updateProgressBar);
