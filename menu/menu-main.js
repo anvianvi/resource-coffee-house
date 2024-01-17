@@ -9,9 +9,11 @@ import '/styles/footer.scss'
 let isMobile = window.innerWidth <= 768;
 let productsPagesLoaded = 1
 let curentActiveCategory = 'coffee'
-let productTotalPrice = 0
-let additivesCost = 0
 let productDefaultprice = 0
+let currentSizeCost = 0
+let additivesCost = 0
+let productTotalPrice = 0
+
 
 function createProductCard(product, index) {
   const div = document.createElement('div');
@@ -234,20 +236,13 @@ function createSizeElement(sizes) {
       div.onclick = function () {
         let costBoxValue = document.getElementById('cost-box-value')
         const sizeSelectors = document.querySelectorAll('.size-selector')
-        productTotalPrice = productDefaultprice + parseFloat(item['add-price'])
+        currentSizeCost = parseFloat(item['add-price'])
+        productTotalPrice = productDefaultprice + currentSizeCost + additivesCost;
         costBoxValue.textContent = `$ ${productTotalPrice.toFixed(2)}`;
         sizeSelectors.forEach(element => {
           element.classList.remove('active')
         });
         this.classList.add('active')
-
-        console.log(costBoxValue)
-        console.log(sizeSelectors)
-        console.log(productTotalPrice)
-
-        console.log(item['add-price'])
-
-
       };
       sizeBoxElement.appendChild(div)
     }
@@ -264,7 +259,7 @@ function createAdditiveElement(additives) {
     if (additives.hasOwnProperty(key)) {
       const item = additives[key];
       const div = document.createElement('div');
-      div.className = 'addons-selector';
+      div.className = 'addons-selector additive-selector';
 
       let addonsLable = document.createElement('div')
 
@@ -277,11 +272,18 @@ function createAdditiveElement(additives) {
       div.appendChild(addonName)
 
       div.onclick = function () {
-        this.classList.toogle('active')
-        console.log(item['add-price'])
-        console.log(productTotalPrice)
-        productTotalPrice += Number(item['add-price'])
-        console.log(productTotalPrice)
+        let costBoxValue = document.getElementById('cost-box-value')
+
+        if (this.classList.contains('active')) {
+          additivesCost -= parseFloat(item['add-price'])
+        } else {
+          additivesCost += parseFloat(item['add-price'])
+        }
+
+        productTotalPrice = productDefaultprice + currentSizeCost + additivesCost;
+        costBoxValue.textContent = `$ ${productTotalPrice.toFixed(2)}`;
+
+        this.classList.toggle('active')
       };
       additiveElement.appendChild(div)
     }
