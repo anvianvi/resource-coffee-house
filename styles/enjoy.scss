@@ -22,9 +22,6 @@
     position: relative;
     cursor: pointer;
   }
-  .active {
-    background: $color-border-dark;
-  }
 
   .dot::after {
     content: "";
@@ -34,6 +31,12 @@
     height: 15px;
     border-radius: inherit;
     background: transparent;
+  }
+
+  .dot-fill {
+    height: 100%;
+    width: 0%;
+    background: $color-border-dark;
   }
 }
 

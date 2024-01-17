@@ -1,17 +1,32 @@
 @import "./variables";
 
 .herro {
+  position: relative;
   background: $color-background-container;
   width: 100%;
   padding: 60px 16px;
   background: url("/resource-coffee-house/img/img-hero.jpg") center/cover
     no-repeat;
   border-radius: 40px;
+  overflow: hidden;
+}
+
+.herro-back-video {
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: auto;
+  height: 100%;
+  z-index: 0;
+  border-radius: 40px;
+  filter: grayscale(30%);
 }
 
 .herro-wrapper {
+  position: relative;
   max-width: 530px;
   color: $color-text-light;
+  z-index: 1;
 
   .h1-home {
     font-size: 42px;
@@ -32,6 +47,9 @@
   .herro {
     padding: 100px 60px;
   }
+  .herro-back-video {
+    left: -50%;
+  }
   .herro-wrapper {
     .h1-home {
       font-size: 72px;
@@ -43,5 +61,10 @@
 @media (width>1438px) {
   .herro {
     padding: 100px;
+  }
+  .herro-back-video {
+    left: 0;
+    width: 100%;
+    height: auto;
   }
 }
